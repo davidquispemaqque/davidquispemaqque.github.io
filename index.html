@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <title>Portafolio - David Quispe</title>
+
+<body>
+    <header>
+        <h1>Mi Página Personal</h1>
+        <img src="Imagen.jpg" alt="Mi Avatar" width="200px">
+    </header>
+
+    <section>
+        <h2>Presentación Personal</h2>
+        <p>Hola, ¡Bienvenidos a mi página web personal! Mi nombre es Quispe Maqque, David.</p>
+        <button id="saludoButton">¡Saludar!</button>
+    </section>
+
+    <section>
+        <h2>Sobre Mí</h2>
+        <p>Lo que me apasiona es conocer lugares y viajar.</p>
+        <p>Hobbies: Me gusta jugar fútbol, pasar tiempo con mi familia y con mi pareja.</p>
+        <p>Gustos: Disfruto del helado y la pizza.</p>
+    </section>
+
+    <section>
+        <h2>Tecnologías y lenguajes de Programación</h2>
+        <p>Algunas de las tecnologías y lenguajes de programación que me interesan incluyen:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Formación Profesional</h2>
+        <p>Soy estudiante de la carrera Diseño y Desarrollo de Software en Tecsup, actualmente en mi tercer semestre. En mi programa académico, he tenido la oportunidad de estudiar una variedad de cursos, algunos de los cuales incluyen:</p>
+        <ul>
+            <li>Base de Datos Avanzadas</li>
+            <li>Desarrollo de Aplicaciones en Internet</li>
+            <li>Estructuras de Datos y Algoritmos</li>
+            <li>Ingeniería de Requerimientos y Diseño de Software</li>
+            <li>Sistemas Operativos</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Idiomas</h2>
+        <p>Hablo español y estoy practicando inglés y un poco de portugués.</p>
+    </section>
+    <button id="cambiarColorButton">Cambiar Color de Fondo</button>
+
+    <script>
+    const cambiarColorButton = document.getElementById("cambiarColorButton");
+
+    cambiarColorButton.addEventListener("click", function () {
+        document.body.style.backgroundColor = getRandomColor();
+    });
+
+    function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    </script>
+
+    <script>
+        const saludoButton = document.getElementById("saludoButton");
+
+        saludoButton.addEventListener("click", function () {
+            alert("¡Hola! Soy David Quispe. ¡Bienvenidos a mi página web personal!");
+        });
+    </script>
+</body>
+</html>
